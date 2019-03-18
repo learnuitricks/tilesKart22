@@ -1,0 +1,45 @@
+<form name="loginForm" #lgForm="ngForm">
+<div class="container-fluid">
+<div class="form-group">
+  <label for="email">Email address:</label>
+  <input type="email"  name="username" class="form-control" id="email" [(ngModel)]="userName" required #uName="ngModel" pattern="^[1-9][0-9]{5}$">
+
+  <div class="alert alert-danger" *ngIf="((!uName.valid) && uName.errors?.required )">
+    user name is required
+  </div>
+  <div class="alert alert-danger" *ngIf="((!uName.valid) && uName.errors?.pattern )">
+    user name does not match zip code.
+  </div>
+
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd" [(ngModel)]="passWord" name="password">
+</div>
+<button class="btn btn-primary" (click)="validateLogin()" >Login</button>
+</div>
+
+</form>
+
+<div>
+  username pristine status : {{uName.pristine}}
+</div>
+
+<div>
+  username dirty status : {{uName.dirty}}
+</div>
+
+<div>
+  username validity status : {{uName.valid}}
+</div>
+
+
+<div>
+  form  validity status : {{lgForm.valid}}
+</div>
+
+<div>
+  form  submitted status : {{lgForm.submitted}}
+</div>
+
+

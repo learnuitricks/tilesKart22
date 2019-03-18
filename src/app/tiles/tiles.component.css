@@ -1,0 +1,15 @@
+.filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.card{
+border-style:solid;
+border-color:#08f;
+margin-top: 98px;
+margin-bottom: 1px;
+}
+.p-0 {
+    padding: 13px !important;
+}

@@ -1,0 +1,10 @@
+<td> <img [src]="imagePath+xtile.image" alt="" srcset=""  width="42" height="42"> </td>
+
+<td><a [routerLink]="['/tiles',xtile.Id]">{{xtile.name}}</a></td>
+<td> {{xtile.model}}</td>
+ <td> {{xtile.price | currency:'INR'}}</td>
+ <td> {{xtile.status |status}}</td>
+ <td><app-star [rating]='xtile.rating'  (ratingClicked) ="updateRatingToDb($event)"></app-star></td>
+
+
+ 
